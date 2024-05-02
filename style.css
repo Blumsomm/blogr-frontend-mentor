@@ -1,0 +1,803 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  }
+
+body, html {
+  overflow-x: hidden;
+  background: hsl(0, 26%, 96%);
+  font-family: "Overpass", sans-serif;
+}
+
+/* Navigation Bar */
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: url(images/bg-pattern-intro-desktop.svg), no-repeat, hsl(13, 100%, 72%);
+  background-position: -400px center;
+  background-size: 200%;
+  padding: 4rem 10rem;
+  border-bottom-left-radius: 6rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .site-nav {
+  display: flex; 
+  align-items: center;
+  flex: 1;
+  margin-left: 3.5rem;
+}
+
+.navigation .site-nav li {
+  margin-right: 1.5rem;
+  list-style: none;
+  position: relative;
+}
+
+.navigation .site-nav li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: 1s;
+  font-family: "ubuntu", sans-serif;
+  padding: 1rem 0;
+}
+
+.navigation .site-nav li a:hover{
+  text-decoration: underline;
+}
+
+.navigation .site-nav li img {
+  margin-left: 0.5rem;
+  transition: .5s;
+}
+
+.navigation .site-nav li:hover img {
+  transform: rotate(-180deg);
+}
+
+.navigation .site-nav li .dropdown-menu {
+  display: none;
+  transition: 1s;
+}
+
+.navigation .site-nav li:hover .dropdown-menu{
+  display: block;
+  z-index: 999;
+}
+
+.navigation .site-nav li .dropdown-menu ul {
+  position: absolute;
+  margin-top: 1rem;
+  margin-left: -2rem;
+  background: hsl(0, 0%, 100%);
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.4);
+  width: 150px;
+}
+
+.navigation .site-nav li .dropdown-menu ul li {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.navigation .site-nav li .dropdown-menu ul li:last-child {
+  margin-bottom: 0;
+}
+
+.navigation .site-nav li .dropdown-menu ul li a {
+  color: hsl(240, 0%, 56%);
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navigation .site-nav li .dropdown-menu ul li a:hover {
+  color: hsl(0, 0%, 5%);
+  font-weight: 600;
+}
+
+.navigation .register {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .register li {
+  margin-left: 2rem;
+  list-style: none;
+}
+
+.navigation .register li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-family: "ubuntu", sans-serif;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.navigation .register li .sign-up {
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 2rem;
+  color: hsl(356, 100%, 66%);
+  border-radius: 2rem;
+  transition: .5s;
+  border: none;
+}
+
+.navigation .register li .sign-up:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+
+.navigation #mobilemenu {
+  display: none;
+} 
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50% -50%);
+  color: hsl(0, 0%, 100%);
+}
+
+.header-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-family: "Overpass", sans-serif;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.header-content .header-content-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-content .header-content-links li {
+  margin: 0.5rem;
+  list-style: none;
+}
+
+.header-content .header-content-links li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 1rem 1.5rem;
+  font-family: "ubuntu", sans-serif;
+}
+
+.header-content .header-content-links li .start {
+  background: hsl(0, 0%, 100%);
+  color: hsl(356, 100%, 66%);
+  border-radius: 2rem;
+  transition: .5s;
+  border: 2px solid hsl(0, 0%, 100%);
+}
+
+.header-content .header-content-links li .start:hover {
+  background: hsl(355, 100%, 74%);
+  color: hsl(0, 0%, 100%);
+}
+
+.header-content .header-content-links li .learn-more {
+  border: 2px hsl(0, 0%, 100%) solid;
+  border-radius: 2rem;
+}
+
+.header-content .header-content-links li .learn-more:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(356, 100%, 66%); 
+  border-radius: 2rem;
+}
+
+.mobilenav {
+  display: none;
+}
+
+.description {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 8rem 0 3rem 8rem;
+  background: hsl(0, 26%, 96%);
+  z-index: 2;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  color:hsl(208, 49%, 24%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: -4rem; 
+}
+
+ .description-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+} 
+
+.description-content .description-content-leftcolumn {
+  flex-basis: 50%;
+}
+
+.description-content-leftcolumn h3 {
+  font-size: 1.8rem;
+  color: hsl(208, 49%, 24%);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-family: "Overpass", sans-serif;
+}
+.description-content-leftcolumn p {
+  font-size: 1.2rem;
+  color: hsl(208, 49%, 24%);
+  font-weight: 300;
+  margin-bottom: 3rem;
+  font-family: "Overpass", sans-serif;
+}
+
+.description-content .description-content-rightcolumn {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.desktop-editor {
+  width: 150%;
+  position: relative;
+}
+
+.mobile-editor {
+  display: none;
+}
+
+.services {
+  width: 100%;
+  position: relative;
+  padding: 6rem 10rem;
+  background: hsl(237, 17%, 21%);
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.services .services-rightcolumn {
+  flex-basis: 50%;
+}
+
+.services .services-rightcolumn h4 {
+  font-size: 2.3rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+}
+
+.services .services-rightcolumn p {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.services .services-leftcolumn {
+  position: relative;
+  flex-basis: 40%;
+  background-image: url(images/illustration-phones.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.services .services-leftcolumn .phone {
+  position: absolute;
+  left: -2.5rem;
+  top: -17rem;
+  z-index: 3;
+}
+
+.services .services-leftcolumn .circles-pattern {
+  position: absolute;
+  left: -30rem;
+  top: -50rem;
+  z-index: 1;
+  width: 250%;
+}
+
+.features {
+  width: 100%;
+  padding: 15rem 10rem 15rem 0;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.features .features-leftcolumn {
+  position: relative;
+  flex-basis: 50%;
+}
+
+.features .features-leftcolumn .desktop-laptop {
+  width: 150%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: -16rem;
+}
+
+.features .features-leftcolumn .mobile-laptop {
+  display: none;
+}
+
+.features .features-rightcolumn {
+  flex-basis: 40%;
+  position: relative;
+}
+
+.features .features-rightcolumn h5 {
+  font-size: 1.8rem;
+  color: hsl(208, 49%, 24%);
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-family: "Overpass", sans-serif;
+}
+
+.features .features-rightcolumn p {
+    font-size: .95rem;
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 3rem;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 300;
+    line-height: 2.1rem;
+}
+
+.footer {
+  width: 100%;
+  padding: 4rem 10rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  border-top-right-radius: 6rem;
+  background: hsl(240, 10%, 16%);
+}
+
+.footer .footer-col {
+  flex-basis: 20%;
+}
+
+.footer .footer-col h6 {
+  font-size: 1rem;
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-family: "ubuntu", sans-serif;
+}
+
+.footer .footer-col ul li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.footer .footer-col ul li a {
+  text-decoration: none;
+  color: hsl(240, 2%, 79%);
+  font-size: 1rem;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+.footer .footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .attribution{
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: hsl(240, 2%, 79%);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+.footer .attribution a {
+  text-decoration: none;
+  color: hsl (0, 0%, 100%);
+  font-family: "ubuntu", sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+
+/* Responsive Design */
+
+@media (max-width: 1350px) {
+  .description {
+    justify-content: space-between;
+  }
+
+  .services .services-leftcolumn .phone {
+    width: 125%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .description {
+    padding-top: 4rem;
+    }
+
+  .description-content .description-content-leftcolumn {
+    margin-top: 7.5rem;
+  }
+  }
+@media (max-width: 1024px) {
+  .navigation .site-nav li {
+    margin-right: 0.5rem;
+  }
+
+  .navigation .site-nav li a {
+    font-size: 0.9rem;
+  } 
+
+  .navigation .register li .sign-up {
+    padding: 1rem 1.75rem
+  }
+
+  .services{
+    padding: 5rem 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+@media (max-width: 991px) {
+  .navigation .site-nav,
+  .navigation .register {
+    display: none;
+  }
+
+  .header {
+    background: url(images/bg-pattern-intro-mobile.svg);
+    background-position: center;
+    background-size: 400%;
+    padding: 4rem 1.5rem;
+    background-color: hsl(353,100%, 62%);
+  }
+
+  .navigation {
+    justify-content: space-between;
+  }
+
+ .header .header-content .header-content-links li .start,
+ .header .header-content .header-content-links li .learn-more {
+    padding: 1rem;
+    font-size: 0.8rem;
+    display: block;
+  }
+
+ .navigation #mobilemenu{
+    display: block;
+  }
+
+  #mobilenav{
+    display: block;
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    background: hsl(0, 0%, 100%);
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: none;
+    border-radius: .5rem;
+    z-index: 10;
+    transition: 0.5s;
+  }
+
+  .mobilenav ul li {
+    list-style: none;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobilenav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "ubuntu", sans-serif;
+    color: hsl(240, 10%, 16%);
+  }
+
+.mobilenav ul li img {
+    margin-left: 0.5rem;
+    transition: .5s;
+  }
+
+  .mobilenav ul li:nth-child(3) {
+    position: relative;
+  }
+
+  .mobilenav ul li:hover img {
+    transform: rotate(180deg);
+  }
+
+  .mobilenav ul .connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobilenav ul .connect .connect-text {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobilenav ul .connect .dropdown-menu-mobile {
+    background: hsl(0, 10%, 92%);
+    padding: 1.5rem 0;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: none;
+    transition: 0.2s;
+  }
+
+  .mobilenav .connect:hover .dropdown-menu-mobile {
+    display: block;
+  }
+
+  .mobilenav ul .connect .dropdown-menu-mobile li:last-child {
+    margin-bottom: 0;
+  }
+
+  .mobilenav ul hr {
+    display: block;
+    border: none;
+    border-top: 1px solid hsl(0, 4% 85%);
+    margin: 2rem auto 2rem;
+    width: 100%;
+  }
+
+  .mobilenav ul .signup {
+    margin-bottom: 0;
+  }
+
+  .mobilenav ul .signup a {
+    padding: 0.8rem 2.5rem;
+    background: linear-gradient(90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    transition: 0.5s;
+    font-family: "ubuntu", sans-serif;
+    font-weight: 400;
+  }
+
+  .mobilenav ul .signup a:hover {
+    background: linear-gradient(90deg, hsl(353,100%, 62%), hsl(13, 100%, 72%));
+  }
+
+  .description {
+    padding: 4rem 2rem 8rem;
+  }
+
+  .description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  .description-content {
+    flex-wrap: wrap;
+  }
+
+  .description-content .description-content-rightcolumn {
+    position: relative; 
+    order: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    margin-bottom: -3rem;
+  }
+
+  .desktop-editor {
+    display: none;
+  }
+
+  .mobile-editor {
+    display: block;
+    width: 110%;
+    margin-bottom: 1.5rem;
+  } 
+
+  .description-content .description-content-leftcolumn {
+    order: 2;
+    text-align: center;
+    margin-bottom: 3rem;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .description-content-leftcolumn h3 {
+    margin-bottom: 1rem;
+  }
+
+  .description-content-leftcolumn p {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+
+  .services{
+    padding: 8rem 6rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .services .services-rightcolumn{
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 11rem;
+  }
+
+  .services .services-leftcolumn .phone{
+      position: absolute;
+      left: 125%;
+      transform: translateX(-50%);
+      top: -15rem;
+      z-index: 3;
+      width: 375px;
+  }
+
+  .features {
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .features .features-leftcolumn {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .features .features-leftcolumn .desktop-laptop {
+    display: none;
+  }
+
+  .features .features-leftcolumn .mobile-laptop {
+    display: block;
+    width: 130%;
+    margin-bottom: 1.5rem;
+  }
+
+  .features .features-rightcolumn {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .features .features-rightcolumn h5 {
+    font-size: 1.7rem;
+  }
+
+  .footer{
+    padding: 4rem 0 6rem;
+    flex-wrap: wrap;
+  }
+
+  .footer .footer-col{
+    flex-basis: 25%;
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+
+  .footer .attribution{
+    font-size: .9rem;
+  }
+
+  .footer .attribution a{
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer .footer-col {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-content {
+    font-size: 1.9rem;
+  }
+
+  .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-content .header-content-links li .start {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .description-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .description-content-leftcolumn h3 {
+    font-size: 1.5rem;
+  }
+
+  .services {
+    padding-left: 1rem;
+  }
+
+.services .services-rightcolumn{
+    margin-top: 5rem;
+    padding: 0 2rem;
+}
+
+.services .services-rightcolumn h4{
+    font-size: 2.1rem;
+    padding-top: 1rem;
+}
+
+.services .services-leftcolumn .phone {
+  left: 160%;
+  width: 300px;
+  }
+
+  footer .attribution{
+    font-size: .7rem;
+}
+
+footer .attribution a{
+    font-size: .7rem;
+}
+}
